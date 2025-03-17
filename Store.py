@@ -8,4 +8,7 @@ app = Flask(__name__)
 def home():
   return render_template("Store.html")
 
+app.route('/Store.html', methods = ['GET','POST'])
+
+
 
