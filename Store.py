@@ -19,7 +19,7 @@ def add_cupcake():
 
         toppings = request.form['garnierungen'] 
 
-        print(name)
+        print(title)
         print(price)
         print(toppings)
 
@@ -28,7 +28,7 @@ def add_cupcake():
 
         cursor = conn.cursor()  
 
-        cursor.execute(f"INSERT INTO cupcakes (name, price, toppings) VALUES ('{name}', '{preis}', '{garnierungen}')") 
+        cursor.execute(f"INSERT INTO cupcakes (name, preis, garnierungen) VALUES ('{title}', '{price}', '{toppings}')") 
 
          
 
@@ -48,6 +48,3 @@ def add_cupcake():
 if __name__ == '__main__':  
 
     app.run(debug=True)  
-
-
-
