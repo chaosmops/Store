@@ -19,16 +19,19 @@ def add_cupcake():
 
         toppings = request.form['garnierungen'] 
 
+        type = request.form['sorte']
+
         print(title)
         print(price)
         print(toppings)
+        print(type)
 
 
         conn = sqlite3.connect('cupcakes.db') 
 
         cursor = conn.cursor()  
 
-        cursor.execute(f"INSERT INTO cupcakes (name, preis, garnierungen) VALUES ('{title}', '{price}', '{toppings}')") 
+        cursor.execute(f"INSERT INTO cupcakes (name, preis, garnierungen, sorte) VALUES ('{title}', '{price}', '{toppings}','{type}')") 
 
          
 
@@ -37,7 +40,7 @@ def add_cupcake():
         conn.close() 
   
 
-        print(f"Titel: {title}, Preis: {price}, Garnierungen: {toppings}") 
+        print(f"Titel: {title}, Preis: {price}, Garnierungen: {toppings}, Sorte: {type}") 
 
          
 
