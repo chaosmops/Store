@@ -15,23 +15,27 @@ def add_cupcake():
 
         title = request.form['name'] 
 
-        price = request.form['preis'] 
-
         toppings = request.form['garnierungen'] 
 
         type = request.form['sorte']
 
+        toppingprice = request.form['garnierungenpreis'] 
+
+        typeprice = request.form['sortepreis'] 
+
         print(title)
-        print(price)
         print(toppings)
         print(type)
+        print(toppingprice)
+        print(typeprice)
+
 
 
         conn = sqlite3.connect('cupcakes.db') 
 
         cursor = conn.cursor()  
 
-        cursor.execute(f"INSERT INTO cupcakes (name, preis, garnierungen, sorte) VALUES ('{title}', '{price}', '{toppings}','{type}')") 
+        cursor.execute(f"INSERT INTO cupcakes (name, garnierungen, sorte, garnierungenpreis, sortepreis) VALUES ('{title}', '{toppings}', '{type}', '{toppingprice}', '{typeprice}')") 
 
          
 
@@ -40,7 +44,7 @@ def add_cupcake():
         conn.close() 
   
 
-        print(f"Titel: {title}, Preis: {price}, Garnierungen: {toppings}, Sorte: {type}") 
+        print(f"Titel: {title}, Garnierungen: {toppings}, Sorte: {type}, Garnierungspreis: {toppingprice}, Sortenpreis: {typeprice}") 
 
          
 
@@ -51,6 +55,19 @@ def add_cupcake():
 if __name__ == '__main__':  
 
     app.run(debug=True)  
+
+
+#app.route('/register.html', methods = ['GET','POST'])
+#def add_rigster():
+
+    #if request.method == 'POST': 
+
+
+
+
+
+
+
 
 
 
