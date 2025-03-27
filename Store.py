@@ -8,7 +8,7 @@ app = Flask(__name__)
 def home():
   return render_template("store.html")
 
-app.route('/cupcake.html', methods = ['GET','POST'])
+@app.route('/cupcake.html', methods = ['GET','POST'])
 def add_cupcake():
   
     if request.method == 'POST': 
