@@ -35,6 +35,21 @@ def add_cupcake():
 
         cursor = conn.cursor()  
 
+        cursor.execute("""
+            "CREATE TABLE" cupcake (
+                       
+                name INTEGER PRIMARY KEY TEXT NOT NULL,
+                       
+                garnierungen TEXT NOT NULL,
+                       
+                sorte TEXT NOT NULL,
+                       
+                garnierungspreis NOT NULL NUMERIC,
+                       
+                sortenpreis NOT NULL NUMERIC)
+                    
+            """)
+
         cursor.execute(f"INSERT INTO cupcakes (name, garnierungen , sorte, garnierungspreis , sortenpreis) VALUES ('{title}', '{toppings}', '{type}', '{toppingprice}', '{typeprice}')") 
 
          
