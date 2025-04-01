@@ -13,15 +13,15 @@ def add_cupcake():
   
     if request.method == 'POST': 
 
-        title = request.form['title'] 
+        title = request.form['name'] 
 
-        toppings = request.form['toppings'] 
+        toppings = request.form['garnierungen'] 
 
-        type = request.form['type']
+        type = request.form['sorte']
 
-        toppingprice = request.form['toppingprice'] 
+        toppingprice = request.form['garnierungspreis'] 
 
-        typeprice = request.form['typeprice'] 
+        typeprice = request.form['sortenpreis'] 
 
         print(title)
         print(toppings)
@@ -35,7 +35,7 @@ def add_cupcake():
 
         cursor = conn.cursor()  
 
-        cursor.execute(f"INSERT INTO cupcakes (title, toppings, type, toppingsprice, typeprice) VALUES ('{title}', '{toppings}', '{type}', '{toppingprice}', '{typeprice}')") 
+        cursor.execute(f"INSERT INTO cupcakes (name, garnierungen , sorte, garnierungspreis , sortenpreis) VALUES ('{title}', '{toppings}', '{type}', '{toppingprice}', '{typeprice}')") 
 
          
 
