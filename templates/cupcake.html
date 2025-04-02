@@ -12,12 +12,10 @@
 
   <nav class="navbar  bg-body-tertiary ">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="https://cdn.pixabay.com/photo/2017/02/15/00/48/logo-2067396_1280.png" alt="Logo"  height="50" > Navbar</a>
+      <a class="navbar-brand" href="{{ url_for('home') }}">
+        <img src="https://cdn.pixabay.com/photo/2017/02/15/00/48/logo-2067396_1280.png" alt="Logo"  height="50" > Der Cupcakeshop</a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
+        
 
         
       </ul>
@@ -26,34 +24,20 @@
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Der Cupcakeladen</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body nav-underline">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link " aria-current="page" href="{{ url_for('home') }}">Startseite</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">zur Kasse</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
+            
           </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+
           </form>
         </div>
       </div>
@@ -82,25 +66,33 @@
         <input class="form-check-input" type="checkbox"   name="garnierungen">
         <label class="form-check-label" >Kriebelstreusel  </label>
       </div>
+      <p></p>
+      <label for="exampleInputEmail1" class="form-label">Sorte</label> <p></p>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio"  value="" name="sorte" >
+        <label class="form-check-label" > Vanile </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio"   name="sorte">
+        <label class="form-check-label" >Schokolade </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio"  name="sorte">
+        <label class="form-check-label" >wassermelone </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio"   name="sorte"id="flexRadioDefault3">
+        <label class="form-check-label" for="flexRadioDefault1"> Erdbeer </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio"   name="sorte" id="flexRadioDefault3">
+        <label class="form-check-label" for="flexRadioDefault3">Osterspecial (Karotten) </label>
+      </div>
+      </div>
+      
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
 
 
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-secondary">Submit</button>
-  </form>
-
-
+   
 </body>
